@@ -57,7 +57,7 @@ tape.test('it will write Object type', t => {
     b: 2,
     c: 'value for key c'
   }], testFilePath, err => {
-    t.equal(fs.readFileSync(testFilePath, 'utf-8'), 'a,1\nb,2\nc,value for key c\n')
+    t.equal(fs.readFileSync(testFilePath, 'utf-8'), '{"a":1,"b":2,"c":"value for key c"}\n')
     fs.unlinkSync(testFilePath) // remove test file
     t.end()
   })

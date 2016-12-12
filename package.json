@@ -1,7 +1,7 @@
 {
   "name": "array-to-txt-file",
   "version": "1.0.0",
-  "description": "takes in an array and will write each value to a text file. Each value is force-converted toString(), and concatenated with a newline.",
+  "description": "takes in an array and will write each value to a text file. Each value is converted to a string, and concatenated with a newline.",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon ./test/index.js | faucet",

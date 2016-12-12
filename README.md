@@ -2,7 +2,7 @@
 
 takes in an array and will write each value to a text file.
 Each value is force-converted toString(), and concatenated with a newline.
-Objects are flattened and written out on newlines with the form `<key>,<value>`
+Objects are written via JSON.stringify output.
 
 ## Install
     $ npm install array-to-txt-file

@@ -7,8 +7,25 @@ Objects are written via JSON.stringify output.
 ## Install
     $ npm install array-to-txt-file
 
+
+## Example
 ```
-writeArrayToTxtFile(array, txtFilePath, cb)
+const arrayToTxtFile = require('array-to-txt-file')
+
+arrayToTxtFile(['Hi there', function add(a,b) {return a+b}, {a: 1, b: 2, c: {d: 3}}], './file.txt', err => {
+    if(err) {
+      console.error(err)
+      return
+    }
+    console.log('Successfully wrote to txt file')
+})
+```
+```
+file.txt:
+
+Hi there
+function add(a,b) {return a+b}
+{"a":1,"b":2,"c":{"d":3}}
 ```
 
 ## Unit tests

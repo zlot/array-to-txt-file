@@ -21,9 +21,7 @@ module.exports = function writeArrayToTxtFile(array, txtFilePath, cb) {
   try {
     array.forEach(v => {
       if(_.isPlainObject(v)) {
-        (_.toPairs(v)).forEach(v => {
-          ws.write(`${v}\n`)
-        })
+        ws.write(`${JSON.stringify(v)}\n`)
         return
       }
       ws.write(`${v}\n`)

@@ -34,3 +34,12 @@ tape.test('it will override txt file with given name, if it does exist', t => {
     })
   })
 })
+
+tape.test('it will write Number type', t => {
+  writeArrayToTxtFile([1,2,3], testFilePath, err => {
+    t.equal(fs.readFileSync(testFilePath, 'utf-8'), '1\n2\n3\n')
+    fs.unlinkSync(testFilePath) // remove test file
+    t.end()
+  })
+})
+

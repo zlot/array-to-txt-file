@@ -50,3 +50,16 @@ tape.test('it will write Function type', t => {
     t.end()
   })
 })
+
+tape.test('it will write Object type', t => {
+  writeArrayToTxtFile([{
+    a: 1,
+    b: 2,
+    c: 'value for key c'
+  }], testFilePath, err => {
+    t.equal(fs.readFileSync(testFilePath, 'utf-8'), 'a,1\nb,2\nc,value for key c\n')
+    fs.unlinkSync(testFilePath) // remove test file
+    t.end()
+  })
+})
+

@@ -63,3 +63,11 @@ tape.test('it will write Object type', t => {
   })
 })
 
+tape.test('if there\'s an error, it will pass error to callback', t => {
+  writeArrayToTxtFile({}, testFilePath, err => {
+    if(err) {
+      t.assert(err, 'error is present')
+      t.end()
+    }
+  })
+})

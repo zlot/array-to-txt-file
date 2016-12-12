@@ -43,3 +43,10 @@ tape.test('it will write Number type', t => {
   })
 })
 
+tape.test('it will write Function type', t => {
+  writeArrayToTxtFile([function add(a, b) {return a+b}], testFilePath, err => {
+    t.equal(fs.readFileSync(testFilePath, 'utf-8'), 'function add(a, b) {return a+b}\n')
+    fs.unlinkSync(testFilePath) // remove test file
+    t.end()
+  })
+})

@@ -7,6 +7,10 @@
     "dev": "nodemon ./test/index.js | faucet",
     "test": "node ./test/index.js | faucet"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zlot/get-dirs.git"
+  },
   "keywords": [
     "array",
     "txt file",

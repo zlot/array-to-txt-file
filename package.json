@@ -1,6 +1,6 @@
 {
   "name": "array-to-txt-file",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "takes in an array and will write each value to a text file. Each value is converted to a string, and concatenated with a newline.",
   "main": "index.js",
   "scripts": {
